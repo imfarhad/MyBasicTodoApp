@@ -18,6 +18,13 @@ export class MyRevisedTodoApp extends React.Component {
     );
   };
 
+  onItemClick = (id, todoItem) => {
+    console.log(id + " clicked ---- " + todoItem + " will be removed");
+    this.state.todos.splice(id,1);
+    this.setState({
+      todos: [...this.state.todos]
+    },()=>console.log(todoItem + " removed from list"))
+  };
 
   render() {
     return (
@@ -29,7 +36,7 @@ export class MyRevisedTodoApp extends React.Component {
           value="Add Todo"
           onClick={this.onAddTodoClick}
         />
-        <MyRevisedTodoList todos={this.state.todos}/>
+        <MyRevisedTodoList todos={this.state.todos} onItemClick={this.onItemClick}/>
       </div>
     );
   }
