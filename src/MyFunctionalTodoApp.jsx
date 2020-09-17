@@ -8,8 +8,13 @@ const MyFunctionalTodoApp = () => {
 
   const onAddTodoClick = () => {
     let todo = document.getElementById("todo").value;
-    document.getElementById("todo").value = '';
+    document.getElementById("todo").value = "";
     setTodos([...todos, todo]);
+  };
+
+  const onTodoItemClick = (id) => {
+    todos.splice(id, 1);
+    setTodos([...todos]);
   };
 
   return (
@@ -22,7 +27,7 @@ const MyFunctionalTodoApp = () => {
         value="Add Todo"
         onClick={onAddTodoClick}
       />
-      <MyFunctionalTodoList todos={todos} />
+      <MyFunctionalTodoList todos={todos} onTodoItemClick={onTodoItemClick} />
     </div>
   );
 };
