@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import { MyRevisedTodoApp } from './MyRevisedTodoApp';
+import MyFunctionalTodoApp from './MyFunctionalTodoApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyRevisedTodoApp />
+    <MyFunctionalTodoApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
