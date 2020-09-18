@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import MyFunctionalTodoApp from './MyFunctionalTodoApp';
 
 import { FirebaseAppProvider } from 'reactfire';
 import FirebaseTestApp from './FirebaseTestApp';
@@ -17,9 +16,6 @@ const firebaseConfig = {
   appId: "1:79397324806:web:2b0844b9ab66b029291b87",
   measurementId: "G-1YRDTM9X5J"
 };
-
-//    <MyFunctionalTodoApp />
-
 
 ReactDOM.render(
   <React.StrictMode>
